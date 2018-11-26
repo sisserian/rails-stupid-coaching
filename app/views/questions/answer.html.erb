@@ -1,0 +1,22 @@
+<div class="container">
+  <h1>Questions#answer</h1>
+  <!-- <p>Find me in app/views/questions/answer.html.erb</p> -->
+  <div class="question">
+    <p><%= @your_message %>
+     - You
+   </p>
+ </div>
+ <hr>
+ <div class="answer">
+  <p>Coach:
+    <%=if @your_message.include? "?"
+      "Silly question, get dressed and go to work!"
+    elsif @your_message.include? "I am going to work right now!"
+      "Great!"
+    else
+      "I don't care, get dressed and go to work!"
+      end %></p>
+    </div>
+    <hr>
+    <%= link_to "Ask another question", ask_path %>
+  </div>
